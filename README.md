@@ -1,24 +1,10 @@
 # credit-risk-classification
 
-Split the Data into Training and Testing Sets
-  Open the starter code notebook and use it to complete the following steps:
-      Read the lending_data.csv data from the Resources folder into a Pandas DataFrame.
-      Create the labels set (y) from the “loan_status” column, and then create the features (X) DataFrame from the remaining columns.
-      Split the data into training and testing datasets by using train_test_split.
+## Purpose
+A supervised learning model is created that predicts loan defaults based on a variety of factors including loan size, interest rate, income and past derogatory marks.
 
-Create a Logistic Regression Model with the Original Data
-  Create a Logistic Regression Model with the Original Data
-    Fit a logistic regression model by using the training data (X_train and y_train).
-    Save the predictions for the testing data labels by using the testing feature data (X_test) and the fitted model.
-    Evaluate the model’s performance by doing the following:
-      Calculate the accuracy score of the model.
-      Generate a confusion matrix.
-      Print the classification report.
-    Answer the following question: How well does the logistic regression model predict both the 0 (healthy loan) and 1 (high-risk loan) labels?
-    
-Write a Credit Risk Analysis Report
-  Write a brief report that includes a summary and analysis of the performance of the machine learning models that you used in this homework. You should write this report as the README.md file included in your GitHub        repository.
-  Structure your report by using the report template that Starter_Code.zip includes, ensuring that it contains the following:
-    An overview of the analysis: Explain the purpose of this analysis.
-    The results: Using a bulleted list, describe the accuracy score, the precision score, and recall score of the machine learning model.
-    A summary: Summarize the results from the machine learning model. Include your justification for recommending the model for use by the company. If you don’t recommend the model, justify your reasoning.
+## Tools
+Pandas is used to import and structure the data while Sklearn is used to build, run and evaluate the model. The data is split into a test and train set, and a logistic regression model is fit to the training data. Predictions are made using the testing data, and various accuracy scores as well as a confusion matrix are generated to evaluate the validity of the model. Finally, the RandomOverSampler method is used to balance the highly disproportionate ratio of output values.
+
+## Results
+Two models are made and evaluated in this project. Both are linear regression models with the same solver, but the data that goes into each model is different. For the first model with unprocessed data, the balanced accuracy score is about 95% which is good for a machine learning model. However, when the model is trained on balanced data, we achieve an accuracy score of 99% which is an exceptional score. Further changes could be made such as normalizing the feature data or using different solvers, but the improvement in accuracy would be minimal.
